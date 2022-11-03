@@ -2,46 +2,85 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-#encabezado {
-    background-color: #052c43;
-    height: 50px;
+#cuerpo{
+    background-image: url(fondo1.jpg);
 }
-
-#navegacion {
-    float: left;
-    height: 50px;
-    padding: 15px 10px;
-    font-family: 'Segoe UI';
-    font-weight: bolder;
-}
-
-#navegacion > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.topnav {
     overflow: hidden;
     background-color: #052c43;
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+    height: 75px;
+    padding: 15px 10px;
 }
-#navegacion > li {
+
+.topnav a {
     float: left;
-}
-#navegacion > li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;   
-}
-#navegacion > ul li {
-    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-#navegacion > ul a {
-    padding: 0 10px;
-    color: white;
-    
+.topnav a.active {
+    background-color: #f8bd1b;
+    color: black;
 }
+
+.topnav a.logout {
+    background-color: red;
+    color: white;
+}
+
+.topnav .login-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width:120px;
+}
+
+.topnav .login-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 10px;
+    background-color: #f8bd1b;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Segoe UI';
+}
+
+.topnav .login-container button:hover {
+    background-color: #052c43;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .login-container {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .login-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+
 #mensaje {
     float: right;
     height: 50px;
@@ -57,7 +96,7 @@
 #principal {
     float: left;
     width: 75%;
-    background-color: white;
+    background-image: url(fondo1.jpg);
 }
 #principal_h1 {
     font-size: 3rem;
